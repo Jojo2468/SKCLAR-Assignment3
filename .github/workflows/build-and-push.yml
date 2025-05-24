@@ -18,10 +18,10 @@ jobs:
         with:
           context: ./app
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/webapp:latest
+          tags: ghcr.io/jojo2468/webapp:latest
       - name: Build and push db
         uses: docker/build-push-action@v4
         with:
           context: ./db
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/db:latest
+          tags: ghcr.io/jojo2468/db:latest
