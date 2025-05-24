@@ -23,10 +23,10 @@ jobs:
         with:
           context: ./app
           push: true
-          tags: ghcr.io/${{ github.repository }}/webapp:latest
+          tags: ghcr.io/${{ github.repository_owner }}/skclar-assignment3/webapp:latest
       - name: Build and push db
         uses: docker/build-push-action@v4
         with:
           context: ./db
           push: true
-          tags: ghcr.io/${{ github.repository }}/db:latest
+          tags: ghcr.io/${{ github.repository_owner }}/skclar-assignment3/db:latest
