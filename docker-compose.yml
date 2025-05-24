@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  webapp:
+    build: ./app
+    environment:
+      - DB_HOST=db
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+  db:
+    build: ./db
+    ports:
+      - "5432:5432"
